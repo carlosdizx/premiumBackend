@@ -45,20 +45,14 @@ public class EmpresaRest
             response.put("error", e.getMessage().concat(": ").concat(e.getMostSpecificCause().getMessage() ));
             return new ResponseEntity<>(response,HttpStatus.INTERNAL_SERVER_ERROR);
         }
+
     }
 
     @PostMapping("/all")
-    public ResponseEntity<Map<String,Object>>save(@RequestBody Empresa pEmpresa, BindingResult pResult){
+    public ResponseEntity<Map<String,Object>>save(@RequestBody Empresa pEmpresa){
         final Map<String, Object>response = new HashMap<>();
-        if (pResult.hasErrors()){
-            final List<String> errores = pResult.getFieldErrors().stream().map(
-                    e->"El campo '".concat(e.getField()).concat("' ")+e.getDefaultMessage())
-                    .collect(Collectors.toList());
-            response.put("errores",errores);
-            return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
-        }
         try{
-            final Empresa empresa = service.save(pEmpresa);
+            Empresa empresa = service.save(pEmpresa);
             if (empresa == null){
                 response.put("mensaje","La empresa no se ha podido registrar, verifique los datos");
                 return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
