@@ -48,11 +48,11 @@ public class EmpresaRest
 
     }
 
-    @PostMapping("/all")
+    @PostMapping("/")
     public ResponseEntity<Map<String,Object>>save(@RequestBody Empresa pEmpresa){
         final Map<String, Object>response = new HashMap<>();
         try{
-            Empresa empresa = service.save(pEmpresa);
+            final Empresa empresa = service.save(pEmpresa);
             if (empresa == null){
                 response.put("mensaje","La empresa no se ha podido registrar, verifique los datos");
                 return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
