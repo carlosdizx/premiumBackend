@@ -1,3 +1,11 @@
+   _____           _              ______                     _           _____  _              ____                        _       
+  / ____|         | |            |  ____|                   | |         |  __ \(_)            |  _ \                      | |      
+ | |     __ _ _ __| | ___  ___   | |__   _ __ _ __   ___ ___| |_ ___    | |  | |_  __ _ ____  | |_) | __ _ ___  __ _ _ __ | |_ ___ 
+ | |    / _` | '__| |/ _ \/ __|  |  __| | '__| '_ \ / _ \ __| __/ _ \   | |  | | |/ _` |_  /  |  _ < / _` / __|/ _` | '_ \| __/ _ \
+ | |____ (_| | |  | | (_) \__ \  | |____| |  | | | |  __\__ \ |_ (_) |  | |__| | | (_| |/ /   | |_) | (_| \__ \ (_| | | | | |_  __/
+  \_____\__,_|_|  |_|\___/|___/  |______|_|  |_| |_|\___|___/\__\___/   |_____/|_|\__,_/___|  |____/ \__,_|___/\__,_|_| |_|\__\___|
+                                                                                                                                   
+                                                                                                                                   
 # premiumBackend
 En este repositorio se está creando el sistema de información premium por el lado del backend, el cual se encarga de gestionar las prácticas empresariales en el programa de ingeniería en sistemas de la Universidad Mariana, aunque con un enfoque de escalabilidad para posteriormente aplicar los conocimientos adquiridos con este proyecto en los demás programas de demás facultades de la universidad.
 
